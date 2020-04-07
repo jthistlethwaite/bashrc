@@ -1,0 +1,3 @@
+# pretty git logs courtesy of Matt at codersbible
+# https://codersbible.com/5-git-commands-to-know-just-after-you-get-the-basics/
+alias git-log="git log --graph --decorate --pretty=oneline --abbrev-commit --all"

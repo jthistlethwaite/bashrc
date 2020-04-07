@@ -1,0 +1,24 @@
+# Strip DEFINER clauses from SQL dumps
+
+
+# do it to the specified file and output to stdout
+function ,mysql-strip-definers()
+{
+
+	targetFile=$1
+
+	sed -e 's/DEFINER=[^*]*\*/\*/g' $targetFile
+
+
+}
+
+# do it to the specified file and overwrite the changes directly
+function ,mysql-strip-definers-inline()
+{
+
+	targetFile=$1
+
+	sed -i 's/DEFINER=[^*]*\*/\*/g' $targetFile
+
+
+}
